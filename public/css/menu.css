@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('/imagenes/computo.jpg'); /* Ruta de la imagen */
+    background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(34, 34, 34, 0.5); /* Color de fondo con opacidad */
+    border: 1px solid #00f;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    backdrop-filter: blur(10px); /* Agrega un efecto de difuminado */
+}
+
+h1 {
+    color: #00f;
+    font-size: 36px;
+    position: relative;
+    z-index: 3;
+}
+
+p {
+    font-size: 18px;
+    position: relative;
+    z-index: 3;
+}
+
+.iconos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icono {
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px; /* Espaciado horizontal entre iconos */
+    font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+}
+
+.icono img {
+    width: 50px; /* Tamaño de los íconos */
+}
+
+.icono p {
+    margin: 5px 0;
+}
+
+.menu {
+    position: relative; /* Cambiado de fixed a relative */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ajuste el z-index para colocar el menú detrás de otros elementos */
+}
+
+.iconMenu {
+    margin: 15px;
+    position: relative;
+    font-size: 24px; /* Tamaño de los íconos */
+    z-index: 2; /* Ajuste el z-index para colocar los iconos del menú encima de otros elementos */
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); /* Posiciona el tooltip debajo del icono */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.iconMenu:hover .tooltip {
+    display: block;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

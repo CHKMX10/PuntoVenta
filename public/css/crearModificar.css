@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: black;
+    font-family: 'Roboto', Arial, sans-serif;
+    text-align: center;
+    background-image: url('/imagenes/computo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+.EntradaDatos {
+    position: absolute;
+    top: 50%; /* Mover hacia abajo */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(34, 34, 34, 0.5);
+    border: 1px solid #00f;
+    border-radius: 10px;
+    padding: 15px 90px; /* Reducir el padding vertical y horizontal */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.EntradaDatos input[type="text"],
+.EntradaDatos input[type="number"],
+.EntradaDatos input[type="email"],
+.EntradaDatos input[type="password"]
+ {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9); /* Ajustar opacidad */
+    color: #000; /* Color del texto */
+}
+
+/* Estilo predeterminado del botón */
+#CrearBt {
+    background-color: #00f; /* Color azul */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 10px 20px; /* Padding del botón */
+    font-size: 18px; /* Tamaño del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+}
+
+/* Estilo del botón cuando el puntero está encima */
+#CrearBt:hover {
+    background-color: #0f0; /* Color verde */
+}
+
+
+.TablaDatos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(34, 34, 34, 0.5);
+    border: 1px solid #00f;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    letter-spacing: 2px; 
+}
+
+.TablaDatos h1 {
+    color: #00f;
+    font-size: 36px;
+    margin-bottom: 30px; 
+}
+
+.Tabla {
+    margin-top: 30px; 
+    width: 80%;
+    background-color: rgba(34, 34, 34, 0.5);
+    border: 1px solid #fff; 
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-collapse: collapse; 
+}
+
+.Tabla th, .Tabla td {
+    padding: 20px; 
+    text-align: center;
+    color: white;
+    border: 1px solid #fff; 
+}
+.back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1002; /* Asegura que los iconos estén por encima de la notificación */
+}
+
+.back a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0 20px;
+    z-index: 1002; /* Asegura que los iconos estén por encima de la notificación */
+}
+
+
+.back-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+h1 {
+    color: #00f;
+    font-size: 36px;
+    position: relative;
+    z-index: 3;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    z-index: 1001; /* Ajusta el z-index para estar por debajo de los iconos */
+    text-align: center; /* Centra el contenido horizontalmente */
+    animation: fadeOut 8s forwards; /* Animación para ocultar la notificación después de 8 segundos */
+}
+
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.error {
+    background-color: red;
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.iconos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icono {
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px; /* Espaciado horizontal entre iconos */
+    font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+}
+
+.icono img {
+    width: 50px; /* Tamaño de los íconos */
+}
+
+.icono p {
+    margin: 5px 0;
+}
